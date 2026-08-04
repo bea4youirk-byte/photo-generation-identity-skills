@@ -1,0 +1,4 @@
+interface:
+  display_name: "Photo Identity Generation"
+  short_description: "Identity-safe portrait generation workflows"
+  default_prompt: "Use $photo-identity-generation to prepare or execute this identity-sensitive photo task."
