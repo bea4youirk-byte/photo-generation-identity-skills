@@ -2,7 +2,7 @@
 
 ## Current stage
 
-Skill hardening, repository integration, and privacy correction.
+Private-repository bootstrap prepared; project and skills validated and packaged.
 
 ## Last updated
 
@@ -14,26 +14,30 @@ Skill hardening, repository integration, and privacy correction.
 - Preserved the original five focused instruction skills and reusable templates.
 - Created the consolidated installable skill `photo-identity-generation` using the official OpenAI skill-creator structure.
 - Added `agents/openai.yaml` and project-specific references.
-- Ran the official skill validator successfully on all six skills.
-- Installed the skills into both `/home/oai/.codex/skills/` and `/home/oai/.agents/skills/` and verified matching checksums.
-- Confirmed GitHub repository admin and push permissions.
-- Confirmed real GitHub writes by creating the primary skill files on branch `main`.
+- Ran the official OpenAI `quick_validate.py` validator successfully on all six skills.
+- Installed the skills into both `/home/oai/.codex/skills/` and `/home/oai/.agents/skills/` in the build environment and verified matching copies.
+- Confirmed GitHub repository admin, read, and push permissions.
+- Confirmed real GitHub writes on branch `main`.
+- Added the `$bootstrap-private-project` Windows workflow: GitHub CLI browser authentication, private visibility enforcement, install, commit, push, and verification.
+- Built a single project ZIP so the owner does not need to download or upload multiple files.
 
 ## Saved materials and links
 
 - Repository: `bea4youirk-byte/photo-generation-identity-skills`
 - Primary skill: `skills/photo-identity-generation/`
 - Proven prompts: `references/proven-prompts.md`
-- Legacy focused skills: `skills/generation-intent-guard/`, `skills/identity-lock-prompt-engineer/`, `skills/reference-scene-reconstruction/`, `skills/portrait-series-consistency/`, `skills/identity-fidelity-review/`
+- Focused skills: `skills/generation-intent-guard/`, `skills/identity-lock-prompt-engineer/`, `skills/reference-scene-reconstruction/`, `skills/portrait-series-consistency/`, `skills/identity-fidelity-review/`
 - Templates: `templates/`
 - Source audit: `SOURCES.md`
+- Windows private bootstrap: `START_PRIVATE_PROJECT.cmd` and `scripts/bootstrap-private-project.ps1`
 
 ## Confirmed facts and sources
 
 - The connected GitHub account has admin, read, and push access to the repository.
 - The repository default branch is `main`.
-- The repository exists and accepts writes through the GitHub connector.
-- Official OpenAI skill structure requires `SKILL.md` and recommends `agents/openai.yaml`; detailed material belongs in `references/`.
+- The repository accepts writes through the GitHub connector.
+- Official OpenAI skill structure requires `SKILL.md`; `agents/openai.yaml` supplies interface metadata; detailed context belongs in `references/`.
+- GitHub CLI supports browser authentication, repository creation, visibility changes, repository inspection, and push verification.
 
 ## Unverified claims — do not publish
 
@@ -42,13 +46,14 @@ Skill hardening, repository integration, and privacy correction.
 
 ## Open decisions and assumptions
 
-- Existing five skills remain as focused legacy modules; `photo-identity-generation` is the primary entry point.
+- Existing five skills remain focused supporting modules; `photo-identity-generation` is the primary entry point.
 - Personal reference photographs are not stored in the repository.
+- The Windows bootstrap changes the current repository to private rather than creating a duplicate.
 
 ## Blockers
 
-- Repository visibility is currently public but the new project requirement is private. The active GitHub connector exposes file and branch operations but not repository-visibility changes.
+- The assistant cannot execute a Windows program on the owner's physical PC. The single packaged bootstrap must be launched locally; it handles all remaining GitHub actions and asks only for GitHub browser authorization when required by GitHub.
 
 ## Next concrete step
 
-Change repository visibility to private, verify private read/write access, then begin the next live photo-generation task using `$photo-identity-generation`.
+Run `START_PRIVATE_PROJECT.cmd`; the script will make the repository private, install the skills, push the verified state, and write `BOOTSTRAP_RESULT.md`.
