@@ -5,3 +5,5 @@
 - Prefer anonymized prompt examples and non-identifying metadata.
 - Review third-party scripts before execution and pin their source version.
 - Do not add dependencies merely because they are present in a larger skill library.
+- The Windows bootstrap uses GitHub CLI's browser authentication; it never reads, stores, prints, or commits a token.
+- Repository visibility must verify as `PRIVATE` before the bootstrap reports success.
