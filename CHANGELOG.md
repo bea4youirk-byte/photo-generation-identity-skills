@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.3.0 — 2026-08-04
+
+- Integrated the reusable `$bootstrap-private-project` workflow.
+- Added a one-click Windows bootstrap using GitHub CLI browser authentication.
+- Added automatic private-visibility enforcement, skill installation, commit/push, and end-state verification.
+- Added `BOOTSTRAP_RESULT.md` generation and stricter privacy checks.
+- Rebuilt the single ZIP delivery to avoid manual multi-file transfers.
+
 ## 0.2.0 — 2026-08-04
 
 - Added consolidated primary skill `photo-identity-generation`.
@@ -8,7 +16,6 @@
 - Validated all six skills with the official OpenAI quick validator.
 - Installed the skills into both Codex and Agent Skills catalogs and verified matching checksums.
 - Confirmed real GitHub read/write access and committed the new skill to `main`.
-- Recorded the remaining repository-visibility blocker: the repository is public but the current project requirement is private.
 
 ## 0.1.0 — 2026-08-04
 
