@@ -21,20 +21,29 @@ It handles:
 - minimal face/body/scene corrections;
 - QA, source auditing, project-state continuation, and repository persistence.
 
+## One-click private bootstrap for Windows
+
+1. Extract the release ZIP.
+2. Double-click `START_PRIVATE_PROJECT.cmd`.
+3. Complete GitHub browser authorization only if GitHub CLI requests it.
+
+The bootstrap installs the skills, changes the existing repository to private (or creates it privately if absent), commits the current project tree, pushes `main`, and verifies visibility/read/write state.
+
 ## Repository layout
 
 ```text
 skills/photo-identity-generation/   Primary installable skill
-skills/*/                           Legacy focused modules
+skills/*/                           Focused supporting modules
 references/proven-prompts.md        Owner-provided successful patterns
 templates/                          Reusable prompt templates
 examples/                           Worked examples
 PROJECT_STATE.md                    Current stage and next action
 SOURCES.md                          Source and dependency audit
 SECURITY.md                         Privacy and secret-handling rules
+scripts/                            Installers and private bootstrap
 ```
 
-## Install
+## Install only
 
 Linux/macOS:
 
