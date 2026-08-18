@@ -1,46 +1,58 @@
-# Photo Generation Identity Skills
+# Visual Generation + Identity + Presentation Production Skills
 
-Reusable workflows for photorealistic image generation and editing where the same real person must remain recognizable across reference-based scenes and multi-shot series.
+Reusable agent workflows for high-fidelity visual generation/editing and presentation production where references, real identities, real products, evidence, and approved source layouts must not drift.
 
-## Primary skill
+The repository began with photorealistic identity-consistent generation. It now also contains separate workflows for presentation visual generation and exact product-catalog mastering.
 
-`photo-identity-generation` is the consolidated project skill.
+## Skill families
 
-Invoke it with:
+### Photo identity and reference fidelity
 
-```text
-$photo-identity-generation
-```
+- `photo-identity-generation` — consolidated workflow for a recognizable real person across reference-based scenes and multi-shot series.
+- `generation-intent-guard` — prevents accidental generation when prompts/references are being analyzed or stored.
+- `identity-lock-prompt-engineer` — builds reference-locked prompts.
+- `identity-fidelity-review` — reviews identity drift and reference fidelity.
+- `portrait-series-consistency` — keeps a series visually/identically consistent.
+- `reference-scene-reconstruction` — recreates a reference scene while controlling what may change.
 
-It handles:
+### Presentation and product production
 
-- prompt-only preparation without accidental generation;
-- identity and body reference selection;
-- one-scene reference reconstruction;
-- identity-consistent portrait and fashion series;
-- minimal face/body/scene corrections;
-- QA, source auditing, project-state continuation, and repository persistence.
+- `presentation-visual-generation` — generates presentation-safe conceptual/decorative visuals while protecting evidence boundaries and exact-product authenticity.
+- `master-product-catalog` — repairs/finalizes existing PPTX product catalogs using exact official manufacturer imagery, non-generative hardware cleanup, proportional placement, whole-block render/contact-sheet QA, and verified final delivery.
 
-## One-click private bootstrap for Windows
+## Golden case
 
-1. Extract the release ZIP.
-2. Double-click `START_PRIVATE_PROJECT.cmd`.
-3. Complete GitHub browser authorization only if GitHub CLI requests it.
+`examples/golden-cases/felicity-solar-2026-catalog.md` records the owner-approved process that produced the strongest technical-catalog result in the project to date. The private/source PPTX is deliberately not stored in this public repository.
 
-The bootstrap installs the skills, changes the existing repository to private (or creates it privately if absent), commits the current project tree, pushes `main`, and verifies visibility/read/write state.
+## Core principles
+
+- Classify intent before invoking generation.
+- Reference fidelity beats uncontrolled creativity when a real identity/object must stay exact.
+- Authentic evidence is sourced, not generated.
+- Exact real product hardware is not generatively reconstructed.
+- Prefer minimal local corrections over unnecessary full regeneration.
+- For an existing approved PPTX, protect the master instead of casually rebuilding it.
+- Preserve aspect ratio; use explicit contain/crop logic rather than stretching.
+- Structural checks help, but final rendered visual QA is mandatory.
+- Render the whole slide block/deck and inspect a montage/contact sheet before delivery.
+- Preserve proven successful workflows as golden cases.
+
+## GitHub practice review
+
+`references/presentation-generation-github-practice-review.md` records the 2026-08-18 review of public presentation-generation practices (including PptxGenJS-based authoring, slide rendering/montage validation, overlap/out-of-bounds checks, font substitution checks, and structured asset staging) and documents which ideas are adopted, conditional, or rejected.
 
 ## Repository layout
 
 ```text
-skills/photo-identity-generation/   Primary installable skill
-skills/*/                           Focused supporting modules
-references/proven-prompts.md        Owner-provided successful patterns
-templates/                          Reusable prompt templates
-examples/                           Worked examples
-PROJECT_STATE.md                    Current stage and next action
-SOURCES.md                          Source and dependency audit
-SECURITY.md                         Privacy and secret-handling rules
-scripts/                            Installers and private bootstrap
+skills/                           Installable skills
+references/                       Proven prompts, source/practice reviews, supporting guidance
+templates/                        Reusable prompt/workflow templates
+examples/                         Worked examples and sanitized golden cases
+PROJECT_STATE.md                  Current project state
+PROJECT_MEMORY.md                 Durable repository/project decisions
+SOURCES.md                        Source and dependency audit
+SECURITY.md                       Privacy and secret-handling rules
+scripts/                          Installers and bootstrap utilities
 ```
 
 ## Install only
@@ -57,8 +69,8 @@ Windows PowerShell:
 powershell -ExecutionPolicy Bypass -File scripts/install.ps1
 ```
 
-The installers copy the skills into both `~/.codex/skills/` and `~/.agents/skills/`.
+The existing installers copy skills into supported agent skill locations.
 
 ## Privacy
 
-Do not store personal reference photographs in a public repository. No secrets belong in this repository.
+Do not store personal reference photographs, private client decks, private Drive identifiers, secrets, or proprietary source assets in this public repository. Golden cases should describe the workflow and acceptance criteria without publishing private artifacts.
