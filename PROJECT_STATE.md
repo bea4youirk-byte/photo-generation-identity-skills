@@ -25,6 +25,7 @@ Repository expanded from identity-consistent photo generation into a broader vis
 - Added `references/presentation-generation-github-practice-review.md` comparing public GitHub presentation practices with the approved workflow.
 - Updated README to define the repository as a multi-family visual production library.
 - Updated `SOURCES.md` with PPTX/presentation research provenance and adopted/conditional/rejected practices.
+- Verified both `scripts/install.sh` and `scripts/install.ps1` enumerate `skills/*` dynamically, so the two new skills are automatically included without installer edits.
 
 ### GitHub/public-practice review
 
@@ -77,6 +78,7 @@ The private PPTX/Drive identifiers are not stored in this public repository.
 - Current visibility observed through the connector: public.
 - Default branch: `main`.
 - GitHub connector write access: confirmed on 2026-08-18.
+- Existing install scripts automatically install every directory under `skills/`, including the new presentation/product skills.
 
 ## Canonical related repository
 
@@ -89,7 +91,6 @@ The private PPTX/Drive identifiers are not stored in this public repository.
 - Golden cases describe the workflow/acceptance criteria without publishing private artifacts.
 - Authentic products, certifications, customer proof, screenshots and installation evidence are sourced, not generated.
 
-## Next concrete improvements
+## Next concrete improvement
 
-- Add installer/manifest coverage for the two new skills if the repository's installation scripts require explicit enumeration.
-- When `commercial-presentation-ai-skills` becomes writable through the GitHub App, add cross-references or mirror the presentation-specific skills there and keep this repository as the broader visual-generation source of proven workflows.
+When `commercial-presentation-ai-skills` becomes writable through the GitHub App, add cross-references or mirror the presentation-specific skills there. Until then this repository is the writable cross-project source for the new visual-generation/product-catalog workflows.
